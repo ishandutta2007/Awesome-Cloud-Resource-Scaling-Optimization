@@ -7,7 +7,7 @@
 <p align="center">
   <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a>
   <a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a>
-  <a href="https://github.com/ishandutta2007/Awesome-Cloud-Resource-Scaling-Optimization/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Cloud-Resource-Scaling-Optimization?style=social&color=white" alt="GitHub stars" /></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Cloud-Resource-Scaling-Optimization/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Cloud-Resource-Scaling-Optimization?style=social&color=white" alt="GitHub_Stars" /></a>
   <a href="http://creativecommons.org/publicdomain/zero/1.0/"><img src="https://img.shields.io/badge/License-CC0_1.0-lightgrey.svg" alt="License: CC0-1.0" /></a>
   <a href="https://github.com/ishandutta2007/Awesome-Cloud-Resource-Scaling-Optimization/pulls"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" alt="PRs Welcome" /></a>
   <a href="https://github.com/ishandutta2007"><img alt="GitHub followers" src="https://img.shields.io/github/followers/ishandutta2007?label=Follow" /></a>
@@ -62,9 +62,9 @@ The table below lists leading commercial SaaS cloud optimization platforms, sort
 
 ## 🛠️ Open-Source GitHub Projects
 
-The following table presents open-source repositories designed for Kubernetes autoscaling, workload rightsizing, and FinOps metrics collection. Repositories are strictly ordered in descending order by GitHub star count. Each badge links directly to that repository's stargazers page. ⭐
+The following table presents open-source repositories designed for Kubernetes autoscaling, workload rightsizing, and FinOps metrics collection. Repositories are strictly ordered in descending order by GitHub Stars_Count. Each badge links directly to that repository's stargazers page. ⭐
 
-| Repository | GitHub Stars | Core Functionality & Description |
+| Repository | GitHub_Stars | Core Functionality & Description |
 |:---|:---:|:---|
 | **[Infracost](https://github.com/infracost/infracost)** | [![Stars](https://img.shields.io/github/stars/infracost/infracost?style=social&color=white)](https://github.com/infracost/infracost/stargazers) | Cloud cost estimates for Terraform in pull requests. Gives platform teams real-time visibility into monthly cost impact before code is merged into production. 💵 |
 | **[KEDA](https://github.com/kedacore/keda)** | [![Stars](https://img.shields.io/github/stars/kedacore/keda?style=social&color=white)](https://github.com/kedacore/keda/stargazers) | Kubernetes Event-driven Autoscaling. Enables fine-grained pod autoscaling (including scaling down to zero replicas) driven by message queues, metrics engines, and cron schedules. ⚡ |
@@ -104,7 +104,7 @@ Contributions are highly encouraged! To add or update an entry:
 2. Create a descriptive branch: `git checkout -b add-tool-name`. 🌿
 3. Update `README.md` keeping the established tabular schema:
    - For **SaaS**: verify exact starting price, trial/free tier duration, and parent company valuation/revenue metrics.
-   - For **Open-Source**: include a star badge using `style=social&color=white` hyperlinked to the repository's `stargazers` page, and maintain descending star order.
+   - For **Open-Source**: include a Stars_Badge using `style=social&color=white` hyperlinked to the repository's `stargazers` page, and maintain descending star order.
 4. Test markdown formatting and submit a Pull Request. 🚀
 
 ---
