@@ -1,6 +1,6 @@
 # Awesome-Cloud-Resource-Scaling-Optimization
 
-# Top Cloud Resource Scaling & Optimization Ecosystem
+## Top Cloud Resource Scaling & Optimization Ecosystem
 
 **Curated List of SaaS Products & Open-Source GitHub Projects**  
 *Focused on Kubernetes Cost Optimization, Rightsizing & Automated Resource Management*  
