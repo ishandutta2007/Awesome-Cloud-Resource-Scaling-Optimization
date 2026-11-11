@@ -1,0 +1,196 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradients -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070b14"/>
+      <stop offset="50%" stop-color="#0c1527"/>
+      <stop offset="100%" stop-color="#0a101f"/>
+    </linearGradient>
+
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="40%" stop-color="#818cf8"/>
+      <stop offset="80%" stop-color="#c084fc"/>
+      <stop offset="100%" stop-color="#38bdf8"/>
+      <animate attributeName="x1" values="0%;100%;0%" dur="12s" repeatCount="indefinite"/>
+      <animate attributeName="x2" values="100%;200%;100%" dur="12s" repeatCount="indefinite"/>
+    </linearGradient>
+
+    <linearGradient id="pillGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284c7" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#0369a1" stop-opacity="0.1"/>
+    </linearGradient>
+    <linearGradient id="pillGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6366f1" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#4f46e5" stop-opacity="0.1"/>
+    </linearGradient>
+    <linearGradient id="pillGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10b981" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#059669" stop-opacity="0.1"/>
+    </linearGradient>
+    <linearGradient id="pillGrad4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ec4899" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#db2777" stop-opacity="0.1"/>
+    </linearGradient>
+
+    <linearGradient id="lineGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.2"/>
+      <stop offset="50%" stop-color="#818cf8" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#34d399" stop-opacity="0.2"/>
+    </linearGradient>
+
+    <!-- Grid Pattern -->
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.75" stroke-opacity="0.5"/>
+    </pattern>
+
+    <!-- Radial Glows -->
+    <radialGradient id="glowCyan" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowPurple" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#a855f7" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#a855f7" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowEmerald" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#10b981" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#10b981" stop-opacity="0"/>
+    </radialGradient>
+
+    <filter id="blurFilter" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="30"/>
+    </filter>
+  </defs>
+
+  <style>
+    .title {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 800;
+      font-size: 40px;
+      fill: url(#titleGrad);
+      letter-spacing: -0.5px;
+    }
+    .subtitle {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 400;
+      font-size: 17px;
+      fill: #94a3b8;
+      letter-spacing: 0.2px;
+    }
+    .tagline {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 600;
+      font-size: 14px;
+      fill: #38bdf8;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+    .pill-text {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 600;
+      font-size: 13px;
+    }
+    .chart-label {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, monospace;
+      font-size: 11px;
+      fill: #64748b;
+    }
+  </style>
+
+  <!-- 1. Background -->
+  <rect width="1200" height="420" fill="url(#bgGrad)"/>
+  <rect width="1200" height="420" fill="url(#grid)"/>
+
+  <!-- 2. Dynamic Ambient Background Glow Orbs -->
+  <circle cx="200" cy="120" r="180" fill="url(#glowCyan)" filter="url(#blurFilter)">
+    <animate attributeName="cx" values="180;260;180" dur="14s" repeatCount="indefinite"/>
+    <animate attributeName="cy" values="100;160;100" dur="10s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="980" cy="280" r="220" fill="url(#glowPurple)" filter="url(#blurFilter)">
+    <animate attributeName="cx" values="980;900;980" dur="16s" repeatCount="indefinite"/>
+    <animate attributeName="cy" values="280;220;280" dur="12s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="600" cy="380" r="160" fill="url(#glowEmerald)" filter="url(#blurFilter)">
+    <animate attributeName="opacity" values="0.4;0.9;0.4" dur="8s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- 3. Dynamic Cost Optimization & Scaling Graph (Background Graphic Element) -->
+  <g opacity="0.4">
+    <!-- Unoptimized spend curve (Reddish) -->
+    <path d="M 50 360 Q 300 340 600 290 T 1150 210" fill="none" stroke="#f43f5e" stroke-width="2" stroke-dasharray="6 6"/>
+    <!-- Optimized spend curve (Green/Cyan) -->
+    <path d="M 50 360 Q 300 350 600 355 T 1150 340" fill="none" stroke="url(#lineGrad)" stroke-width="2.5"/>
+    
+    <!-- Animated Resource Pulse -->
+    <circle r="4" fill="#38bdf8">
+      <animateMotion path="M 50 360 Q 300 350 600 355 T 1150 340" dur="6s" repeatCount="indefinite"/>
+    </circle>
+    <circle r="4" fill="#f43f5e">
+      <animateMotion path="M 50 360 Q 300 340 600 290 T 1150 210" dur="8s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- 4. Foreground: Main Header Text & Typography -->
+  <g transform="translate(600, 85)" text-anchor="middle">
+    <!-- Tagline Badge -->
+    <rect x="-165" y="-30" width="330" height="26" rx="13" fill="#0f172a" stroke="#1e293b" stroke-width="1.5"/>
+    <circle cx="-145" cy="-17" r="4" fill="#10b981">
+      <animate attributeName="opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <text x="6" y="-13" class="tagline" text-anchor="middle">CLOUD COST &amp; AUTOSCALING RADAR</text>
+
+    <!-- Main Title -->
+    <text x="0" y="42" class="title">Cloud Resource Scaling &amp; Optimization</text>
+
+    <!-- Subtitle -->
+    <text x="0" y="82" class="subtitle">Curated directory of Kubernetes rightsizing, spot orchestration, and FinOps tooling</text>
+  </g>
+
+  <!-- 5. Decorative Foreground Capability Badges / Dynamic Pills -->
+  <g transform="translate(180, 230)">
+    <!-- Pill 1: Kubernetes Rightsizing -->
+    <g transform="translate(0, 0)">
+      <rect width="180" height="42" rx="10" fill="url(#pillGrad1)" stroke="#38bdf8" stroke-width="1.2" stroke-opacity="0.6"/>
+      <circle cx="24" cy="21" r="5" fill="#38bdf8">
+        <animate attributeName="r" values="4;6;4" dur="3s" repeatCount="indefinite"/>
+      </circle>
+      <text x="40" y="26" class="pill-text" fill="#e0f2fe">☸️ K8s Rightsizing</text>
+    </g>
+
+    <!-- Pill 2: Dynamic Autoscaling -->
+    <g transform="translate(210, 0)">
+      <rect width="195" height="42" rx="10" fill="url(#pillGrad2)" stroke="#818cf8" stroke-width="1.2" stroke-opacity="0.6"/>
+      <circle cx="24" cy="21" r="5" fill="#818cf8">
+        <animate attributeName="r" values="4;6;4" dur="2.5s" repeatCount="indefinite"/>
+      </circle>
+      <text x="40" y="26" class="pill-text" fill="#e0e7ff">⚡ Dynamic Scaling</text>
+    </g>
+
+    <!-- Pill 3: FinOps & Cost Visibility -->
+    <g transform="translate(435, 0)">
+      <rect width="195" height="42" rx="10" fill="url(#pillGrad3)" stroke="#34d399" stroke-width="1.2" stroke-opacity="0.6"/>
+      <circle cx="24" cy="21" r="5" fill="#34d399">
+        <animate attributeName="r" values="4;6;4" dur="3.5s" repeatCount="indefinite"/>
+      </circle>
+      <text x="40" y="26" class="pill-text" fill="#d1fae5">💰 FinOps Visibility</text>
+    </g>
+
+    <!-- Pill 4: Spot & Waste Elimination -->
+    <g transform="translate(660, 0)">
+      <rect width="185" height="42" rx="10" fill="url(#pillGrad4)" stroke="#f472b6" stroke-width="1.2" stroke-opacity="0.6"/>
+      <circle cx="24" cy="21" r="5" fill="#f472b6">
+        <animate attributeName="r" values="4;6;4" dur="4s" repeatCount="indefinite"/>
+      </circle>
+      <text x="40" y="26" class="pill-text" fill="#fce7f3">🎯 Spot &amp; Bin-Packing</text>
+    </g>
+  </g>
+
+  <!-- 6. Metrics Bar at Bottom -->
+  <g transform="translate(600, 345)" text-anchor="middle">
+    <rect x="-350" y="-22" width="700" height="38" rx="8" fill="#0f172a" fill-opacity="0.8" stroke="#1e293b" stroke-width="1"/>
+    <text x="-230" y="3" class="chart-label">📊 10+ Enterprise SaaS Evaluated</text>
+    <text x="0" y="3" class="chart-label">⭐ 14+ Active Open-Source Repositories</text>
+    <text x="230" y="3" class="chart-label">📉 Up to 70% Compute Waste Slashed</text>
+  </g>
+</svg>
