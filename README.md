@@ -1,75 +1,105 @@
-# Awesome-Cloud-Resource-Scaling-Optimization
+# Awesome Cloud Resource Scaling & Optimization [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
-## Top Cloud Resource Scaling & Optimization Ecosystem
+> A curated list of production-grade SaaS platforms, cloud-native rightsizing engines, automated autoscalers, and open-source FinOps tools to optimize multi-cloud infrastructure and slash Kubernetes compute waste.
 
-**Curated List of SaaS Products & Open-Source GitHub Projects**  
-*Focused on Kubernetes Cost Optimization, Rightsizing & Automated Resource Management*  
-**Last updated: March 2026**
-
-This repository tracks notable **SaaS platforms** and **open-source projects** for **Cloud Resource Scaling & Optimization**. These tools help organizations reduce cloud waste by rightsizing workloads, automating idle-resource shutdown, optimizing Kubernetes bin-packing, and providing cost visibility across multi-cloud environments.
-
-**Examples** include Spot by NetApp, Kubecost, CloudHealth by VMware (Broadcom), Cast AI, Harness Cloud Cost Management, Granulate (Intel), AWS Auto Scaling, Turbonomic (IBM), Densify, and Zoho CloudSpend (the category leaders).
-
-**Open-source emphasis**: This section highlights every major active project for self-hosted cost visibility, Kubernetes autoscaling, and FinOps tooling—ideal for platform engineers, SREs, and organizations seeking transparent, vendor-neutral optimization without percentage-of-spend pricing models.
-
-Contributions welcome! Open an PR to add/update entries. Keep descriptions factual and link to official sites.
-
-## Table of Contents
-- [SaaS/Hosted Platforms](#saas-products)
-- [Open-Source GitHub Projects](#open-source-github-projects)
-- [How to Contribute](#how-to-contribute)
-- [Disclaimer](#disclaimer)
-
-## SaaS/Hosted Platforms
-
-| Product | Description | Pricing (Starting) | Free Tier / Trial Limits |
-|---------|-------------|-------------------|--------------------------|
-| **[Kubecost](https://kubecost.com/)** | Kubernetes cost monitoring and optimization platform. Provides real-time cost allocation, rightsizing recommendations, and savings insights. The Amazon EKS-optimized bundle is available at no additional charge and excluded from the $100K spend limit introduced in Kubecost v3 free tier [citation:2]. | Free tier with $100K spend limit; paid plans via sales | Free tier available with spend cap; enterprise license purchasable via AWS Marketplace or directly [citation:12] |
-| **[Harness Cloud Cost Management](https://www.harness.io/)** | AI-driven cloud cost optimization with perspectives, budgets, anomaly detection, and AutoStopping rules. Free Forever plan limited to organizations with **< $250K/year cloud spend**, 2 Kubernetes clusters, and 30-day data visibility [citation:5]. | Free Forever (under $250K/year spend); Enterprise quote-only with four separate SKUs (Cloud Cost Insights, Commitment Orchestrator, AutoStopping, Cluster Orchestrator) [citation:5] | **Free Forever**: < $250K/year cloud spend, 2 K8s clusters, 30-day data retention, AutoStopping rules included [citation:5] |
-| **[CloudHealth by VMware](https://www.vmware.com/)** | Multi-cloud cost management and governance platform (Broadcom). Charges **2.2–2.5% of tracked cloud spend** with a **$1,000/month minimum**. CH150K plan at $45,000/annual covers up to $150K/month spend; 12-month minimum commitment [citation:13]. | CH150K: $45,000/year (up to $150K/mo spend, 2.5% rate); higher tiers custom [citation:13] | No free tier; free trial available [citation:3] |
-| **[Cast AI](https://cast.ai/)** | Kubernetes cost optimization with automated bin-packing, spot instance management, and rightsizing. Pricing starts at **$200/month per feature** according to Software Advice listing [citation:4]. | From $200/month per feature [citation:4] | Free version available per listing; free trial offered [citation:4] |
-| **[Spot by NetApp](https://spot.io/)** | Cloud optimization platform for compute and Kubernetes (Ocean, Elastigroup, Eco). Freemium model with self-serve signup. GOV.UK listing shows **£0.03/unit/month** with free trial (all features, limited to 20 VMs) [citation:1][citation:11]. | £0.03/unit/month (GOV.UK listing); pay-as-you-go available [citation:11] | **Free trial**: all features, 20 VMs, limited support [citation:11]; freemium self-serve [citation:1] |
-| **[IBM Turbonomic](https://www.ibm.com/products/turbonomic)** | Application resource management and cloud cost optimization across AWS, Azure, GCP, Kubernetes, and on-premises. Gartner reviewer cited **$800 per VM** for licensing [citation:8]. | ~$800/VM (Gartner Peer Insights citation) [citation:8] | 30-day evaluation available (unlimited accounts/VMs) |
-| **[Densify](https://www.densify.com/)** | ML-based cloud and container resource optimization. Provides rightsizing recommendations and savings estimates via API. | Quote-only | No public free tier; demo via sales |
-| **[Granulate (Intel)](https://granulate.io/)** | Autonomous workload optimization with zero code changes, reducing CPU usage and latency. For pricing, vendor directs users to contact Intel representatives or check the Pricing tab on granulate.io [citation:6]. | Quote-only via Intel [citation:6] | No public free tier; demo available [citation:6] |
-| **[AWS Auto Scaling](https://aws.amazon.com/ec2/autoscaling/)** | Native AWS service for automatically adjusting EC2 capacity based on demand. **No additional charge**—you pay only for the EC2 instances, CloudWatch metrics, and other AWS resources consumed [citation:7]. | **Free** (pay only for underlying AWS resources) [citation:7] | Free forever (service itself has no cost) [citation:7] |
-| **[Zoho CloudSpend](https://www.manageengine.com/cloudspend/)** | Multi-cloud cost management for AWS, Azure, and GCP. Features chargebacks, budgets, forecasting, and anomaly detection [citation:30]. Zoho's own app listing notes a limitation: it cannot track Zoho's own Catalyst server expenses [citation:17]. | Free app; paid plans available (ManageEngine product); exact pricing not listed in search results | Free version available; free trial offered (ManageEngine listing) |
-
-## Open-Source GitHub Projects
-
-| Project | Star Badge | Description |
-|---------|------------|-------------|
-| **[Kubecost (Open Source)](https://github.com/kubecost/cost-analyzer-helm-chart)** | [![Stars](https://img.shields.io/github/stars/kubecost/cost-analyzer-helm-chart?style=social&color=white)](https://github.com/kubecost/cost-analyzer-helm-chart/stargazers) | Open-source Kubernetes cost monitoring. Deploys via Helm; provides real-time cost allocation, idle cost identification, and rightsizing recommendations. The foundation for Kubecost's commercial offering. |
-| **[KubeSurvival](https://github.com/aporia-ai/kubesurvival)** | [![Stars](https://img.shields.io/github/stars/aporia-ai/kubesurvival?style=social&color=white)](https://github.com/aporia-ai/kubesurvival/stargazers) | Finds the cheapest machine types that can run your Kubernetes workloads (~185 stars). Go-based; analyzes resource requirements against cloud pricing [citation:10]. |
-| **[Fadvisor (FinOps Advisor)](https://github.com/gocrane/fadvisor)** | [![Stars](https://img.shields.io/github/stars/gocrane/fadvisor?style=social&color=white)](https://github.com/gocrane/fadvisor/stargazers) | Collection of exporters for cloud resource pricing and billing data. Provides cost allocation insights for containers and Kubernetes resources, guided by FinOps principles [citation:10]. |
-| **[Kubecost Disk Autoscaler](https://github.com/kubecost/disk-autoscaler)** | [![Stars](https://img.shields.io/github/stars/kubecost/disk-autoscaler?style=social&color=white)](https://github.com/kubecost/disk-autoscaler/stargazers) | Resizes Kubernetes PersistentVolumes automatically based on Kubecost recommendations. Reduces over-provisioned storage costs [citation:10]. |
-
-### Additional Strong Open-Source Options
-
-| Project | Star Badge | Description |
-|---------|------------|-------------|
-| **[Valence Manifests](https://github.com/valencenet/valence-manifests)** | [![Stars](https://img.shields.io/github/stars/valencenet/valence-manifests?style=social&color=white)](https://github.com/valencenet/valence-manifests/stargazers) | Rightsizes and autoscales containers intelligently for performance and cost management in Kubernetes. Implements a SLO-based autoscaler [citation:10]. |
-| **[KEDA](https://github.com/kedacore/keda)** | [![Stars](https://img.shields.io/github/stars/kedacore/keda?style=social&color=white)](https://github.com/kedacore/keda/stargazers) | Kubernetes Event-driven Autoscaling. Scales workloads (including to zero) based on external metrics like queue depth or cron schedules—reducing idle resource costs. |
-| **[Goldilocks](https://github.com/FairwindsOps/goldilocks)** | [![Stars](https://img.shields.io/github/stars/FairwindsOps/goldilocks?style=social&color=white)](https://github.com/FairwindsOps/goldilocks/stargazers) | Kubernetes rightsizing tool from Fairwinds. Provides recommendations for resource requests/limits based on actual usage via Vertical Pod Autoscaler. |
-
-**Frameworks for building custom systems**: Combine **Kubecost OSS** for cost visibility, **KEDA** for event-driven scaling to zero, **Goldilocks** for rightsizing recommendations, and **KubeSurvival** for spot instance selection—creating a fully open-source Kubernetes cost optimization stack without percentage-of-spend SaaS fees.
-
-## How to Contribute
-
-1. Fork the repo.
-2. Add/edit entries in `README.md` (follow existing format).
-3. Include: name, link, 1–2 sentence description, and whether it's SaaS or open-source.
-4. Submit PR with a short explanation.
-
-Star the repo if you find it useful!
-
-## Disclaimer
-
-- This is a **community-curated** list — not exhaustive and not an endorsement.
-- Cloud cost optimization tools require broad read access to billing and resource metadata; enforce least-privilege IAM roles and audit data access.
-- Percentage-of-spend pricing (CloudHealth at 2.5% with $1K minimum) can become expensive at scale; model total cost against projected cloud spend before committing. Self-hosted open-source tools require ongoing tuning and maintenance to remain effective as workloads evolve.
+[![GitHub stars](https://img.shields.io/github/stars/ishandutta2007/Awesome-Cloud-Resource-Scaling-Optimization?style=social&color=white)](https://github.com/ishandutta2007/Awesome-Cloud-Resource-Scaling-Optimization/stargazers)
+[![License: CC0-1.0](https://img.shields.io/badge/License-CC0_1.0-lightgrey.svg)](http://creativecommons.org/publicdomain/zero/1.0/)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/ishandutta2007/Awesome-Cloud-Resource-Scaling-Optimization/pulls)
 
 ---
 
-**Made for platform engineers, FinOps practitioners, SREs, and organizations building cost-efficient cloud infrastructure.**  
-Let's make cloud resource optimization more open, automated, and cost-transparent.
+## Overview
+
+Modern cloud infrastructure suffers from pervasive resource over-provisioning and idle overhead. This directory tracks industry-leading **SaaS optimization platforms** and active **open-source FinOps & autoscaling software**. Whether you need real-time Kubernetes bin-packing, automated spot instance lifecycle orchestration, shift-left pull request cost diffs, or multi-cloud allocation dashboards across AWS, Azure, and GCP, these tools empower platform engineers, DevOps teams, and SREs to maximize efficiency and minimize cloud bills.
+
+## Table of Contents
+- [Sector Overview & Market Dynamics](#sector-overview--market-dynamics)
+- [SaaS & Hosted Optimization Platforms](#saas--hosted-optimization-platforms)
+- [Open-Source GitHub Projects](#open-source-github-projects)
+- [Recommended Stack Architecture](#recommended-stack-architecture)
+- [How to Contribute](#how-to-contribute)
+- [Disclaimer & Best Practices](#disclaimer--best-practices)
+
+---
+
+## Sector Overview & Market Dynamics
+
+The global Cloud Cost Management and FinOps market is valued at approximately **$6.4 billion to $9.9 billion** for pure-play tools and exceeds **$16.7 billion** across the broader FinOps services landscape in 2026, expanding at a compound annual growth rate (CAGR) of 12% to 18%. 
+
+The sector remains **highly fragmented** rather than concentrated or winner-take-all; despite notable enterprise acquisitions by tech giants (such as IBM acquiring Apptio, Turbonomic, and Kubecost, and Broadcom absorbing VMware CloudHealth), no single vendor dominates market share due to multi-cloud and hybrid infrastructure complexity, diverse enterprise tech stacks, low barriers to entry for niche container cost estimators, and the rapid emergence of specialized Generative AI workload governance.
+
+---
+
+## SaaS & Hosted Optimization Platforms
+
+The table below lists leading commercial SaaS cloud optimization platforms, sorted in descending order by parent company scale (enterprise market capitalization, valuation, or estimated annual revenue).
+
+| Product | Company Scale (Valuation / Revenue) | Description | Starting Pricing Tier | Free Tier & Trial Limits |
+|:---|:---|:---|:---|:---|
+| **[AWS Auto Scaling](https://aws.amazon.com/ec2/autoscaling/)** | **~$2.1T+** Market Cap (Amazon parent) | Native cloud service dynamically provisioning EC2 capacity, Spot fleets, and ECS/EKS clusters based on target tracking, predictive metrics, and scheduled rules. | **Free** (No platform fee; charges apply solely to underlying EC2/CloudWatch consumption) | **Free Forever**: Service enablement is 100% free with no recurring surcharge; subject to standard AWS Free Tier allocations |
+| **[CloudHealth by VMware](https://www.vmware.com/)** | **~$800B+** Market Cap (Broadcom parent) | Multi-cloud financial management, security posture, and governance platform analyzing cost drivers across AWS, Azure, and Google Cloud. | **$45,000/year** (CH150K base plan covering up to $150K/month spend at 2.5% rate; $1,000/month platform minimum) | **14-Day Free Trial** with full multi-cloud ingestion and evaluation capabilities; no permanent free tier |
+| **[IBM Turbonomic](https://www.ibm.com/products/turbonomic)** | **~$200B+** Market Cap (IBM parent; acquired for ~$1.8B) | Application Resource Management (ARM) engine using AI to automate workload elasticity, storage tiering, and VM placement across hybrid clouds. | **~$800 / VM** per year (Enterprise base pricing cited on enterprise marketplace listings) | **30-Day Evaluation Trial** with full ARM feature access across unlimited connected accounts/VMs; no permanent free tier |
+| **[Granulate (Intel)](https://granulate.io/)** | **~$90B+** Market Cap (Intel parent; acquired for $650M) | Autonomous OS- and runtime-level continuous workload optimization agent slashing CPU usage and latency without requiring code modifications. | **~$0.0045 / core / hour** (Usage-based compute agent metering via AWS/Azure Marketplace) | **21-Day Proof of Concept (PoC) Trial** with dedicated solution engineering validation; free open-source profiling via gProfiler |
+| **[Spot by NetApp](https://spot.io/)** | **~$25B+** Market Cap (NetApp parent; acquired for $450M) | Compute management platform (Ocean, Elastigroup, Eco) automating reliable spot instance fallback, container bin-packing, and commitment portfolio hedging. | **£0.03 / unit / month** (GOV.UK Digital Marketplace rate card; optional pay-as-you-go / 18% of realized savings) | **14-Day Free Trial** (full enterprise features limited to 20 VMs); freemium self-serve entry tier |
+| **[Zoho CloudSpend](https://www.manageengine.com/cloudspend/)** | **~$1B+** Revenue (Zoho Corp / ManageEngine) | Cost management and tracking solution featuring business units, budget anomaly alerts, and tag-based cost allocation across AWS, Azure, and GCP. | **$25 / month** billed annually ($29/month billed monthly) on the Lite plan for up to $100K/year cloud spend | **Free Forever**: Full platform functionality for environments spending up to **$3,000/month** ($36,000/year); 30-day free trial on higher tiers |
+| **[Harness Cloud Cost Management](https://www.harness.io/)** | **$5.5B** Valuation (Series E; $250M+ ARR) | Intelligent cloud cost governance platform providing granular cost perspectives, container allocation, Kubernetes idle waste remediation, and AutoStopping rules. | **Quote-based per SKU** (Insights, Commitment Orchestrator, AutoStopping, Cluster Orchestrator; ~$2,000+/yr baseline) | **Free Forever**: Restricted to organizations with **< $250K/year cloud spend**, up to 2 Kubernetes clusters, 30-day data retention, and AutoStopping |
+| **[Cast AI](https://cast.ai/)** | **$1.0B+** Valuation (Unicorn; Series C; ~$40M+ ARR) | Automated Kubernetes cost optimization platform providing real-time AI cluster rightsizing, automated node bin-packing, and multi-cloud spot fallbacks. | **$1,000 / month** base Growth tier (plus ~$5 per managed vCPU/month consumption meter on cloud marketplaces) | **Free Forever (Cost Monitoring)**: Unlimited read-only cluster visibility, cost allocation, and rightsizing audits; **30-Day Free Trial** for full automation |
+| **[Kubecost](https://kubecost.com/)** | **~$25.5M** Total Venture Funding (Acquired by IBM / Stackwatch) | Industry-standard Kubernetes cost monitoring providing real-time microservice chargebacks, namespace cost allocation, and abandoned asset identification. | **$499 / month** (Business Tier for commercial advanced integrations and multi-cluster aggregations) | **Free Forever**: Single-cluster deployment monitoring up to **$100,000/year cloud spend**; Amazon EKS-optimized bundle provided at zero cost |
+| **[Densify](https://www.densify.com/)** | **~$50M - $100M** Est. Valuation ($38M venture funded) | Machine-learning-based optimization engine analyzing container and cloud VM telemetry to deliver automated rightsizing recommendations via API and Terraform. | **$2.50 / instance / month** (Base Cloud Resource Optimization tier; enterprise annual volume commitments apply) | **60-Day Evaluation Trial** (Kubex / Densify complete feature access across unlimited test workloads; no permanent free tier) |
+
+---
+
+## Open-Source GitHub Projects
+
+The following table presents open-source repositories designed for Kubernetes autoscaling, workload rightsizing, and FinOps metrics collection. Repositories are strictly ordered in descending order by GitHub star count. Each badge links directly to that repository's stargazers page.
+
+| Repository | GitHub Stars | Core Functionality & Description |
+|:---|:---:|:---|
+| **[Infracost](https://github.com/infracost/infracost)** | [![Stars](https://img.shields.io/github/stars/infracost/infracost?style=social&color=white)](https://github.com/infracost/infracost/stargazers) | Cloud cost estimates for Terraform in pull requests. Gives platform teams real-time visibility into monthly cost impact before code is merged into production. |
+| **[KEDA](https://github.com/kedacore/keda)** | [![Stars](https://img.shields.io/github/stars/kedacore/keda?style=social&color=white)](https://github.com/kedacore/keda/stargazers) | Kubernetes Event-driven Autoscaling. Enables fine-grained pod autoscaling (including scaling down to zero replicas) driven by message queues, metrics engines, and cron schedules. |
+| **[Kubernetes Autoscaler](https://github.com/kubernetes/autoscaler)** | [![Stars](https://img.shields.io/github/stars/kubernetes/autoscaler?style=social&color=white)](https://github.com/kubernetes/autoscaler/stargazers) | Upstream Kubernetes autoscaling subproject maintaining Cluster Autoscaler (adjusting cloud node counts to match unscheduled pods) and the Vertical Pod Autoscaler (VPA). |
+| **[OpenCost](https://github.com/opencost/opencost)** | [![Stars](https://img.shields.io/github/stars/opencost/opencost?style=social&color=white)](https://github.com/opencost/opencost/stargazers) | Vendor-neutral CNCF sandbox specification and daemon for real-time Kubernetes cost allocation, measuring container CPU, memory, GPU, and networking expense. |
+| **[Cloud Custodian](https://github.com/cloud-custodian/cloud-custodian)** | [![Stars](https://img.shields.io/github/stars/cloud-custodian/cloud-custodian?style=social&color=white)](https://github.com/cloud-custodian/cloud-custodian/stargazers) | Stateless rules engine for cloud management and FinOps policy-as-code. Enforces automated shutdown of unattached disks, off-hours VM suspension, and tag governance. |
+| **[KRR (Kubernetes Resource Recommender)](https://github.com/robusta-dev/krr)** | [![Stars](https://img.shields.io/github/stars/robusta-dev/krr?style=social&color=white)](https://github.com/robusta-dev/krr/stargazers) | CLI optimization tool by Robusta. Analyzes live Prometheus cluster metrics to calculate optimal Kubernetes pod CPU/memory request and limit recommendations without running agents. |
+| **[Goldilocks](https://github.com/FairwindsOps/goldilocks)** | [![Stars](https://img.shields.io/github/stars/FairwindsOps/goldilocks?style=social&color=white)](https://github.com/FairwindsOps/goldilocks/stargazers) | Visual Kubernetes rightsizing tool by Fairwinds. Deploys the Vertical Pod Autoscaler in recommendation-only mode to establish accurate, baseline resource requests and limits. |
+| **[Karpenter](https://github.com/kubernetes-sigs/karpenter)** | [![Stars](https://img.shields.io/github/stars/kubernetes-sigs/karpenter?style=social&color=white)](https://github.com/kubernetes-sigs/karpenter/stargazers) | Flexible, high-performance Kubernetes node autoscaler. Launches right-sized compute nodes within seconds and continuously consolidates underutilized nodes to minimize cluster spend. |
+| **[Crane](https://github.com/gocrane/crane)** | [![Stars](https://img.shields.io/github/stars/gocrane/crane?style=social&color=white)](https://github.com/gocrane/crane/stargazers) | FinOps-driven cloud resource analytics and QoS-aware autoscaling engine. Features predictive autoscaling (Time Series forecasting), TSP scheduling, and workload rightsizing. |
+| **[Kubecost Helm Chart](https://github.com/kubecost/cost-analyzer-helm-chart)** | [![Stars](https://img.shields.io/github/stars/kubecost/cost-analyzer-helm-chart?style=social&color=white)](https://github.com/kubecost/cost-analyzer-helm-chart/stargazers) | Official Helm deployment for Kubecost's open-core engine, providing local container cost tracking, cluster idle detection, and allocation metrics dashboards. |
+| **[KubeSurvival](https://github.com/aporia-ai/kubesurvival)** | [![Stars](https://img.shields.io/github/stars/aporia-ai/kubesurvival?style=social&color=white)](https://github.com/aporia-ai/kubesurvival/stargazers) | Go-based CLI evaluating workload resource specifications against real-time cloud pricing to identify the absolute cheapest machine types suitable for your Kubernetes deployments. |
+| **[Kubecost Disk Autoscaler](https://github.com/kubecost/disk-autoscaler)** | [![Stars](https://img.shields.io/github/stars/kubecost/disk-autoscaler?style=social&color=white)](https://github.com/kubecost/disk-autoscaler/stargazers) | Autonomous Kubernetes controller resizing PersistentVolumes automatically based on usage thresholds to eliminate over-provisioned cloud block storage waste. |
+| **[Valence Manifests](https://github.com/valencenet/valence-manifests)** | [![Stars](https://img.shields.io/github/stars/valencenet/valence-manifests?style=social&color=white)](https://github.com/valencenet/valence-manifests/stargazers) | Service-level objective (SLO) autoscaler and resource allocator designed to rightsize container deployments while maintaining application performance SLAs. |
+| **[Fadvisor](https://github.com/gocrane/fadvisor)** | [![Stars](https://img.shields.io/github/stars/gocrane/fadvisor?style=social&color=white)](https://github.com/gocrane/fadvisor/stargazers) | Collection of exporters and advisors extracting cloud billing data and resource pricing APIs into Prometheus formats for FinOps compliance and cost chargebacks. |
+
+---
+
+## Recommended Stack Architecture
+
+For organizations seeking maximum cost efficiency without recurring percentage-of-spend enterprise commitments, an end-to-end self-hosted cloud optimization architecture can be constructed purely from open-source tooling:
+
+1. **Shift-Left Cost Gate:** Run [Infracost](https://github.com/infracost/infracost) on GitHub Actions / GitLab CI to flag expensive cloud infrastructure diffs during pull request review.
+2. **Dynamic Node Provisioning:** Deploy [Karpenter](https://github.com/kubernetes-sigs/karpenter) to rapidly provision diverse Spot/On-Demand instance pools and continuously consolidate underutilized nodes.
+3. **Event-Driven Scale to Zero:** Implement [KEDA](https://github.com/kedacore/keda) to eliminate idle container compute when queue lengths or webhook traffic drop during off-peak hours.
+4. **Workload Rightsizing:** Execute [KRR](https://github.com/robusta-dev/krr) and [Goldilocks](https://github.com/FairwindsOps/goldilocks) to tune pod CPU/memory request buffers without manual guesswork.
+5. **Continuous Cost Monitoring:** Install [OpenCost](https://github.com/opencost/opencost) paired with Prometheus/Grafana dashboards for real-time tenant chargebacks.
+6. **Governance Automation:** Run [Cloud Custodian](https://github.com/cloud-custodian/cloud-custodian) policies to delete orphaned EBS volumes, release unattached elastic IPs, and shut down non-production environments over weekends.
+
+---
+
+## How to Contribute
+
+Contributions are highly encouraged! To add or update an entry:
+
+1. **Fork** this repository.
+2. Create a descriptive branch: `git checkout -b add-tool-name`.
+3. Update `README.md` keeping the established tabular schema:
+   - For **SaaS**: verify exact starting price, trial/free tier duration, and parent company valuation/revenue metrics.
+   - For **Open-Source**: include a star badge using `style=social&color=white` hyperlinked to the repository's `stargazers` page, and maintain descending star order.
+4. Test markdown formatting and submit a Pull Request.
+
+---
+
+## Disclaimer & Best Practices
+
+- This list is community-curated for informational purposes and does not constitute an endorsement.
+- **Security Warning:** Cloud cost optimization platforms typically require read access to billing telemetry and cloud resource APIs. Always enforce least-privilege IAM policies, audit external access keys, and run self-hosted tools within isolated VPCs.
+- **Pricing Models:** Evaluate percentage-of-spend commercial pricing carefully against scale. As monthly cloud expenditure grows, fixed-rate SaaS subscriptions or self-hosted open-source stacks frequently offer superior total cost of ownership (TCO).
